@@ -11,21 +11,25 @@ const Table = require('cli-table3');
  */
 const data = {
     handle: 'adisakshya',
-    name: 'Adisakshya Chauhan',
-    bio: 'Student Developer',
-    github: chalk.cyan('https://github.com/adisakshya'),
-    twitter: chalk.cyan('https://twitter.com/adisakshya'),
-    liveChat: chalk.cyan('https://tidio.com/adisakshya'),
-    discord: 'adisakshya#7200',
-    npx: 'npx adi',
+    name: chalk.white.bold('Adisakshya Chauhan'),
+    bio: chalk.gray('Student Developer'),
+    github: chalk.gray('https://github.com/') + chalk.cyanBright('adisakshya'),
+    twitter: chalk.gray('https://twitter.com/') + chalk.cyanBright('adisakshya'),
+    linkedin: chalk.gray('https://linkedin.com/in/') + chalk.cyanBright('adisakshya'),
+    liveChat: chalk.gray('https://tidio.com/') + chalk.cyanBright('adisakshya'),
+    web: chalk.gray('https://') + chalk.cyanBright('adisakshya.github.io'),
+    discord: chalk.cyanBright('adisakshya#7200'),
+    npx: chalk.cyanBright('npx adisakshya'),
     labelTwitter: chalk.white.bold('   Twitter:'),
     labelGitHub: chalk.white.bold('    GitHub:'),
     labelLinkedIn: chalk.white.bold('  LinkedIn:'),
     labelChat: chalk.white.bold(' Live Chat:'),
-    labelDiscord: chalk.white.bold('   Discord:')
+    labelWeb: chalk.white.bold('       Web:'),
+    labelDiscord: chalk.white.bold('   Discord:'),
+    labelCard: chalk.white.bold('   Card:')
 };
 
-const banner = figlet.textSync(data.handle, { verticalLayout: "full" });
+const banner = figlet.textSync(data.handle, { verticalLayout: 'full' });
 const heading = data.name;
 const bio = data.bio;
 const twitter = `${data.labelTwitter}  ${data.twitter}`;
@@ -33,6 +37,8 @@ const github = `${data.labelGitHub}  ${data.github}`;
 const linkedin = `${data.labelLinkedIn}  ${data.linkedin}`;
 const liveChat = `${data.labelChat}  ${data.liveChat}`;
 const discord = `${data.labelDiscord}  ${data.discord}`;
+const card = `${data.labelCard}  ${data.npx}`;
+const web = `${data.labelWeb}  ${data.web}`;
 
 /**
  * Options for the avatar image
@@ -49,11 +55,17 @@ const avatarImagePath = path.join(__dirname, 'assets/avatar.jpg');
     const output =  banner + '\n' + '\n' +
                     heading + '\n' +
                     bio + '\n' + '\n' +
-                    twitter + '\n' +
                     github + '\n' +
-                    liveChat + '\n' +
+                    twitter + '\n' +
+                    linkedin + '\n' +
+                    web + '\n' +
                     discord + '\n';
     const table = new Table();
-    table.push([avatar, { content: output, vAlign: 'center' }]);
+    table.push([
+        { rowSpan: 2, content: avatar},
+        { content: output, vAlign: 'center' }
+    ],[
+        { content: card, hAlign: 'right', vAlign: 'center'}
+    ]);
     console.log(table.toString());
 })();
