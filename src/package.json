@@ -1,9 +1,10 @@
 {
-  "name": "adisakshya",
+  "name": "@adisakshya/card",
   "version": "1.0.0",
   "description": "Digital card of Adisakshya Chauhan (@adisakshya)",
+  "main": "/card/card.js",
   "bin": {
-    "adi": "./card/card.js"
+    "adisakshya": "./card/card.js"
   },
   "scripts": {
     "dev": "node card.js",
@@ -16,9 +17,10 @@
   "keywords": [
     "card",
     "npm",
-    "npm-card",
+    "npm card",
     "npx",
-    "npx-card"
+    "npx card",
+    "business card"
   ],
   "author": "Adisakshya Chauhan <adisakshya98@gmail.com>",
   "license": "MIT",
