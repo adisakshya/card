@@ -1,0 +1,34 @@
+{
+  "name": "adisakshya",
+  "version": "1.0.0",
+  "description": "Digital card of Adisakshya Chauhan (@adisakshya)",
+  "bin": {
+    "adi": "./card/card.js"
+  },
+  "scripts": {
+    "dev": "node card.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adisakshya/card.git"
+  },
+  "keywords": [
+    "card",
+    "npm",
+    "npm-card",
+    "npx",
+    "npx-card"
+  ],
+  "author": "Adisakshya Chauhan <adisakshya98@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adisakshya/card/issues"
+  },
+  "homepage": "https://github.com/adisakshya/card#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "cli-table3": "^0.6.0"
+  }
+}
