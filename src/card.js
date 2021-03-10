@@ -2,6 +2,7 @@
 
 const asciify = require('asciify-image');
 const chalk = require('chalk')
+const figlet = require('figlet');
 const path = require('path');
 const Table = require('cli-table3');
 
@@ -9,7 +10,7 @@ const Table = require('cli-table3');
  * Content of digitial card
  */
 const data = {
-    handle: '@adisakshya',
+    handle: 'adisakshya',
     name: 'Adisakshya Chauhan',
     bio: 'Student Developer',
     github: chalk.cyan('https://github.com/adisakshya'),
@@ -24,7 +25,8 @@ const data = {
     labelDiscord: chalk.white.bold('   Discord:')
 };
 
-const heading = data.name + ' - ' + data.handle;
+const banner = figlet.textSync(data.handle, { verticalLayout: "full" });
+const heading = data.name;
 const bio = data.bio;
 const twitter = `${data.labelTwitter}  ${data.twitter}`;
 const github = `${data.labelGitHub}  ${data.github}`;
@@ -44,7 +46,7 @@ const avatarImagePath = path.join(__dirname, 'assets/avatar.jpg');
 
 (async () => {
     const avatar = await asciify(avatarImagePath, avatarImageOptions);
-    const output =  '\n' +
+    const output =  banner + '\n' + '\n' +
                     heading + '\n' +
                     bio + '\n' + '\n' +
                     twitter + '\n' +

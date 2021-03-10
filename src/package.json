@@ -30,6 +30,7 @@
   "devDependencies": {
     "asciify-image": "^0.1.6",
     "chalk": "^4.1.0",
-    "cli-table3": "^0.6.0"
+    "cli-table3": "^0.6.0",
+    "figlet": "^1.5.0"
   }
 }
