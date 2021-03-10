@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
+const asciify = require('asciify-image');
 const chalk = require('chalk')
+const path = require('path');
 const Table = require('cli-table3');
 
 /**
@@ -30,8 +32,18 @@ const linkedin = `${data.labelLinkedIn}  ${data.linkedin}`;
 const liveChat = `${data.labelChat}  ${data.liveChat}`;
 const discord = `${data.labelDiscord}  ${data.discord}`;
 
+/**
+ * Options for the avatar image
+ */
+const avatarImageOptions = {
+    fit: 'box',
+    width: '22',
+    height: '22'
+};
+const avatarImagePath = path.join(__dirname, 'assets/avatar.jpg');
 
 (async () => {
+    const avatar = await asciify(avatarImagePath, avatarImageOptions);
     const output =  '\n' +
                     heading + '\n' +
                     bio + '\n' + '\n' +
@@ -40,6 +52,6 @@ const discord = `${data.labelDiscord}  ${data.discord}`;
                     liveChat + '\n' +
                     discord + '\n';
     const table = new Table();
-    table.push([{ content: output, vAlign: 'center' }]);
+    table.push([avatar, { content: output, vAlign: 'center' }]);
     console.log(table.toString());
 })();

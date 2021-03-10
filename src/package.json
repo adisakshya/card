@@ -28,6 +28,7 @@
   "homepage": "https://github.com/adisakshya/card#readme",
   "dependencies": {},
   "devDependencies": {
+    "asciify-image": "^0.1.6",
     "chalk": "^4.1.0",
     "cli-table3": "^0.6.0"
   }
