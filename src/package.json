@@ -1,6 +1,6 @@
 {
   "name": "@adisakshya/card",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Digital card of Adisakshya Chauhan (@adisakshya)",
   "main": "/bin/card.js",
   "bin": {
