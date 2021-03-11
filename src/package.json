@@ -2,9 +2,9 @@
   "name": "@adisakshya/card",
   "version": "1.0.0",
   "description": "Digital card of Adisakshya Chauhan (@adisakshya)",
-  "main": "/card/card.js",
+  "main": "/card.js",
   "bin": {
-    "adisakshya": "./card/card.js"
+    "adisakshya": "./card.js"
   },
   "scripts": {
     "dev": "node card.js",
