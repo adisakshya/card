@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-
 const asciify = require('asciify-image');
-const chalk = require('chalk')
+const chalk = require('chalk');
 const figlet = require('figlet');
+const fs = require('fs');
 const path = require('path');
 const Table = require('cli-table3');
 
@@ -67,5 +66,5 @@ const avatarImagePath = path.join(__dirname, 'assets/avatar.jpg');
     ],[
         { content: card, hAlign: 'right', vAlign: 'center'}
     ]);
-    console.log(table.toString());
+    fs.writeFileSync(path.join(__dirname, 'bin/output'), table.toString());
 })();
