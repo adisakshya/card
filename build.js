@@ -11,12 +11,12 @@ const Table = require('cli-table3');
 const data = {
     handle: 'adisakshya',
     name: chalk.white.bold('Adisakshya Chauhan'),
-    bio: chalk.gray('Student Developer'),
+    bio: chalk.gray('Business Technology Solutions Associate @ ZS'),
     github: chalk.gray('https://github.com/') + chalk.cyanBright('adisakshya'),
     twitter: chalk.gray('https://twitter.com/') + chalk.cyanBright('adisakshya'),
     linkedin: chalk.gray('https://linkedin.com/in/') + chalk.cyanBright('adisakshya'),
     liveChat: chalk.gray('https://tidio.com/') + chalk.cyanBright('adisakshya'),
-    web: chalk.gray('https://') + chalk.cyanBright('adisakshya.github.io'),
+    web: chalk.gray('https://') + chalk.cyanBright('adisakshya.codes'),
     discord: chalk.cyanBright('adisakshya#7200'),
     npx: chalk.cyanBright('npx adisakshya'),
     labelTwitter: chalk.white.bold('   Twitter:'),
@@ -54,11 +54,10 @@ const avatarImagePath = path.join(__dirname, 'assets/avatar.jpg');
     const output =  banner + '\n' + '\n' +
                     heading + '\n' +
                     bio + '\n' + '\n' +
+                    linkedin + '\n' +
                     github + '\n' +
                     twitter + '\n' +
-                    linkedin + '\n' +
-                    web + '\n' +
-                    discord + '\n';
+                    web + '\n';
     const table = new Table();
     table.push([
         { rowSpan: 2, content: avatar},
