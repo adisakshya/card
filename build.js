@@ -15,13 +15,11 @@ const data = {
     github: chalk.gray('https://github.com/') + chalk.cyanBright('adisakshya'),
     twitter: chalk.gray('https://twitter.com/') + chalk.cyanBright('adisakshya'),
     linkedin: chalk.gray('https://linkedin.com/in/') + chalk.cyanBright('adisakshya'),
-    liveChat: chalk.gray('https://tidio.com/') + chalk.cyanBright('adisakshya'),
     web: chalk.gray('https://') + chalk.cyanBright('adisakshya.github.io'),
     npx: chalk.cyanBright('npx adisakshya'),
     labelTwitter: chalk.white.bold('   Twitter:'),
     labelGitHub: chalk.white.bold('    GitHub:'),
     labelLinkedIn: chalk.white.bold('  LinkedIn:'),
-    labelChat: chalk.white.bold(' Live Chat:'),
     labelWeb: chalk.white.bold('       Web:'),
     labelCard: chalk.white.bold('   Card:')
 };
@@ -32,7 +30,6 @@ const bio = data.bio;
 const twitter = `${data.labelTwitter}  ${data.twitter}`;
 const github = `${data.labelGitHub}  ${data.github}`;
 const linkedin = `${data.labelLinkedIn}  ${data.linkedin}`;
-const liveChat = `${data.labelChat}  ${data.liveChat}`;
 const card = `${data.labelCard}  ${data.npx}`;
 const web = `${data.labelWeb}  ${data.web}`;
 
